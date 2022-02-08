@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'stylistsnames.dart';
 import 'stylist_card.dart';
 import '../Modules/section_title.dart';
@@ -19,7 +20,7 @@ class Stylists extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            color:Color(0xffecc5a5),
+            color: cardColor2,
             elevation: 10,
             margin: const EdgeInsets.symmetric(vertical: 5),
             shape: RoundedRectangleBorder(
@@ -31,10 +32,10 @@ class Stylists extends StatelessWidget {
                 children: List.generate(
                   stylists.length,
                   (index) => Card(
-                   // key: ValueKey(stylists[index]['name']),
+                    // key: ValueKey(stylists[index]['name']),
                     color: stylists[index] == true
-                    ? Color(0xffecc5a5)
-                    : Colors.white,
+                        ? Color(0xffecc5a5)
+                        : Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.only(right: 5),
                       child: StylistCard(
@@ -53,5 +54,5 @@ class Stylists extends StatelessWidget {
         )
       ],
     );
-  }// 
+  } //
 }

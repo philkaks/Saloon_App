@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class TrendsCard extends StatelessWidget {
   const TrendsCard({
@@ -37,7 +38,7 @@ class TrendsCard extends StatelessWidget {
             Container(
               width: 200,
               height: 200,
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Color(0xffb45202),
@@ -46,8 +47,8 @@ class TrendsCard extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Image.network(
-                image,
+              child: CachedNetworkImage(
+                imageUrl: image,
                 fit: BoxFit.cover,
               ),
             ),

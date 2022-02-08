@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import 'detail_screen.dart';
 
 const stylistData = [
@@ -52,10 +52,15 @@ class Bookings extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                 child: Stack(children: [
                   SizedBox(
-                    child: Image.network(
-                      'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
-                      fit: BoxFit.fill,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
+                      fit: BoxFit.cover,
                     ),
+                    // child: Image.network(
+                    //   'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
+                    //   fit: BoxFit.fill,
+                    // ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

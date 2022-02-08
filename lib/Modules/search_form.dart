@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'constants.dart';
 
 const OutlineInputBorder outlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -19,7 +20,7 @@ class SearchForm extends StatelessWidget {
         onSaved: (value) {},
         decoration: const InputDecoration(
           filled: true,
-          fillColor: Color(0xffb45202),
+          fillColor: mycolor,
           hintText: "Search items...",
           hintStyle: TextStyle(color: Colors.white),
           border: outlineInputBorder,

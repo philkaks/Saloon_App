@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'product_list.dart';
 //import 'package:shopping_cart_side_example/product.dart';
 
@@ -13,21 +14,32 @@ class Desription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Description'),
+        backgroundColor: mycolor,
+        title: const Text('Description'),
       ),
       body: Stack(children: [
         Center(
-          child: Image.network(
-            'https://images.unsplash.com/photo-1522390108011-5f8667fd551d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-            colorBlendMode: BlendMode.hardLight,
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.transparent,
+            child: CachedNetworkImage(
+              imageUrl:
+                  'https://media.istockphoto.com/photos/brunette-woman-with-shiny-long-curly-hair-picture-id928566238?k=20&m=928566238&s=612x612&w=0&h=ko-9dK6h9KexA5WQfe1f0U-SOzY2cJux-PgI2hVpItE=',
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Center(
           child: Card(
-            margin: const EdgeInsets.all(20),
+            color: Color(0xffFFF0EB),
+            margin: const EdgeInsets.all(10),
             elevation: 10,
             child: ListTile(
-              leading: Image.network(product.image),
+              leading: CachedNetworkImage(
+                imageUrl: product.image,
+                fit: BoxFit.cover,
+              ),
               title: Text(
                 product.title,
                 style: const TextStyle(

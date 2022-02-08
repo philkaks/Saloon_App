@@ -1,7 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 // Create a Form widget.
 class Comments extends StatefulWidget {
   const Comments({Key? key}) : super(key: key);
@@ -27,7 +25,7 @@ class MyCustomFormState extends State<Comments> {
     // Build a Form widget using the _formKey created above.
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Share your Experince ',
           style: TextStyle(
             color: Colors.white,
@@ -36,11 +34,15 @@ class MyCustomFormState extends State<Comments> {
       ),
       body: Stack(children: [
         Center(
-          child: Image.network(
-            'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-            colorBlendMode: BlendMode.hardLight,
-            fit: BoxFit.cover,
-          ),
+          child:  CachedNetworkImage(
+              imageUrl: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+              fit:BoxFit.cover,
+              ),
+          // child: Image.network(
+          //   'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          //   colorBlendMode: BlendMode.hardLight,
+          //   fit: BoxFit.cover,
+          // ),
         ),
         Form(
           key: _formKey,

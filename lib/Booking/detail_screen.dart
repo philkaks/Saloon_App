@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 var serviceList = [
-  {'title': "Men's Hair Cut", 'duration': 45, 'price': 33300},
-  {'title': "Women's Hair Cut", 'duration': 60, 'price': 50000},
-  {'title': 'Color & Blow Dry', 'duration': 90, 'price': 75000},
-  {'title': 'Oil Treatment', 'duration': 30, 'price': 20000},
+  {'title': "Men's Hair Cut", 'duration': 45, 'price': 330},
+  {'title': "Women's Hair Cut", 'duration': 60, 'price': 500},
+  {'title': 'Color & Blow Dry', 'duration': 90, 'price': 750},
+  {'title': 'Oil Treatment', 'duration': 30, 'price': 200},
 ];
 
 class StylistDetailScreen extends StatefulWidget {
@@ -35,10 +36,15 @@ class _StylistDetailScreenState extends State<StylistDetailScreen> {
                 child: Stack(
                   fit: StackFit.expand,
                   children: <Widget>[
-                    Image.network(
-                      'https://media.istockphoto.com/photos/hairdresser-female-making-hair-extensions-to-young-woman-with-blonde-picture-id1305808016?b=1&k=20&m=1305808016&s=170667a&w=0&h=vne7jlO5iobPPKoNgunB1a4yQZ_y0MYwv3NY3xUTpHo=',
-                      fit: BoxFit.fill,
+                    CachedNetworkImage(
+                      imageUrl:
+                          'https://media.istockphoto.com/photos/hairdresser-female-making-hair-extensions-to-young-woman-with-blonde-picture-id1305808016?b=1&k=20&m=1305808016&s=170667a&w=0&h=vne7jlO5iobPPKoNgunB1a4yQZ_y0MYwv3NY3xUTpHo=',
+                          fit:BoxFit.cover,
                     ),
+                    // Image.network(
+                    //   'https://media.istockphoto.com/photos/hairdresser-female-making-hair-extensions-to-young-woman-with-blonde-picture-id1305808016?b=1&k=20&m=1305808016&s=170667a&w=0&h=vne7jlO5iobPPKoNgunB1a4yQZ_y0MYwv3NY3xUTpHo=',
+                    //   fit: BoxFit.fill,
+                    // ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
@@ -267,60 +273,62 @@ class _ServiceTileState extends State<ServiceTile> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 30),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 2 - 40,
-                child: Text(
-                  widget.service['title'],
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+      child: SingleChildScrollView(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 2 - 40,
+                  child: Text(
+                    widget.service['title'],
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                '${widget.service['duration']} Min',
-                style: const TextStyle(
-                  color: Colors.grey,
+                const SizedBox(
+                  height: 5,
                 ),
-              ),
-            ],
-          ),
-          Text(
-            'Shs.${widget.service['price']}',
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
+                Text(
+                  '${widget.service['duration']} Min',
+                  style: const TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
             ),
-          ),
-          MaterialButton(
-              onPressed: () {},
-              color: const Color(0xffFF8573),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+            Text(
+              'Shs.${widget.service['price']}',
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
               ),
-              // child: Icon(
-              //   Icons.calendar_today,
-              //   size: 15,
-              // ),
-              child: TextButton(
-                child: (_isFavorite
-                    ? const Text('Book')
-                    : const Icon(
-                        Icons.check,
-                        color: Colors.green,
-                      )),
-                onPressed: _toggleTick,
-              )),
-        ],
+            ),
+            MaterialButton(
+                onPressed: () {},
+                color: const Color(0xffFF8573),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                // child: Icon(
+                //   Icons.calendar_today,
+                //   size: 15,
+                // ),
+                child: TextButton(
+                  child: (_isFavorite
+                      ? const Text('Book')
+                      : const Icon(
+                          Icons.check,
+                          color: Colors.green,
+                        )),
+                  onPressed: _toggleTick,
+                )),
+          ],
+        ),
       ),
     );
   }

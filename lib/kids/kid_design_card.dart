@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class kidsCard extends StatelessWidget {
   const kidsCard({
@@ -35,7 +36,7 @@ class kidsCard extends StatelessWidget {
             Container(
               width: 200,
               height: 200,
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.black,
@@ -44,8 +45,8 @@ class kidsCard extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Image.network(
-                image,
+              child: CachedNetworkImage(
+                imageUrl: image,
                 fit: BoxFit.cover,
               ),
             ),

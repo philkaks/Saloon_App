@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'product_list.dart';
 import 'productscard.dart';
 import '../Modules/section_title.dart';
@@ -27,7 +28,7 @@ class PopularProducts extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            color: Color(0xffecc5a5),
+            color: cardColor1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(

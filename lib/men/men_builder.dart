@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'package:indianyoutubefirebase/men/mens_list.dart';
 
 //import 'package:recessprojectgroup10/saleProducts/product_list.dart';
@@ -29,7 +30,7 @@ class TrendingDesigns extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            color: Color(0xffecc5a5),
+            color: cardColor1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(

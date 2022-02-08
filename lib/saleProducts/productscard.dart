@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import 'cartlogic.dart';
 import 'imagedescription.dart';
 import 'product_list.dart';
@@ -57,10 +57,10 @@ class ProductsCard extends StatelessWidget {
               child: Stack(
                 children: [
                   Center(
-                    child: Image.network(
-                      image,
-                      fit: BoxFit.fill,
-                    ),
+                    child: CachedNetworkImage(
+              imageUrl: image,
+              fit:BoxFit.cover,
+              ),
                   ),
                   IconButton(
                     onPressed: () {

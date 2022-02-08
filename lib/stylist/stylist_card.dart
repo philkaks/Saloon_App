@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:indianyoutubefirebase/Rating/rating.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 
 class StylistCard extends StatelessWidget {
   const StylistCard({
@@ -40,10 +40,10 @@ class StylistCard extends StatelessWidget {
                     //   color: Colors.black,
                     // ),
                   ),
-                  child: Image.network(
-                    image,
-                    fit: BoxFit.fitHeight,
-                  ),
+                  child: CachedNetworkImage(
+              imageUrl: image,
+              fit:BoxFit.cover,
+              ),
                 )
               ],
             ),
@@ -57,7 +57,7 @@ class StylistCard extends StatelessWidget {
                         name,
                         style: const TextStyle(color: Colors.black),
                       ),
-                      Rate(),
+                      const Rate(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

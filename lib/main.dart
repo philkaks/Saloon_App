@@ -3,17 +3,16 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:indianyoutubefirebase/Booking/home_screen.dart';
 import 'package:indianyoutubefirebase/screens/login_page.dart';
-import 'Modules/book.dart';
 import 'Modules/constants.dart';
 import 'Rating/ratingscreen.dart';
-import 'firebase_options.dart';
+import 'Sign_in/utils/authentication_client.dart';
+import 'Sign_in/utils/firebase_options.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:provider/provider.dart';
 import 'homescreen.dart';
 import 'Modules/notifications.dart';
 import 'saleProducts/cartlogic.dart';
 import 'saleProducts/cartscreen.dart';
-import 'utils/authentication_client.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

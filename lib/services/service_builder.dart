@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 
 import 'service_nameslist.dart';
 import 'service_card.dart';
@@ -23,7 +24,7 @@ class Services extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            color: const Color(0xffecc5a5),
+            color: cardColor1,
             elevation: 10,
             margin: const EdgeInsets.symmetric(vertical: 5),
             shape: RoundedRectangleBorder(

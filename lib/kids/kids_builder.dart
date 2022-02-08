@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'package:indianyoutubefirebase/kids/kids_deesignlist.dart';
 
 import 'kid_design_card.dart';
@@ -28,7 +29,7 @@ class Kids extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            color: Color(0xffecc5a5),
+            color: cardColor1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(

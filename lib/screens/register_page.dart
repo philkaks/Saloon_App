@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:indianyoutubefirebase/Sign_in/utils/authentication_client.dart';
+import 'package:indianyoutubefirebase/Sign_in/utils/validator.dart';
 import 'package:indianyoutubefirebase/screens/login_page.dart';
-import 'package:indianyoutubefirebase/utils/authentication_client.dart';
-import 'package:indianyoutubefirebase/utils/validator.dart';
 
 
 

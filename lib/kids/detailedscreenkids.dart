@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
 
 // ignore: must_be_immutable
 class DetailedScreenKids extends StatelessWidget {
@@ -20,6 +22,7 @@ class DetailedScreenKids extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: mycolor,
         title: const Text("Kid's Styles"),
       ),
       body: ListView.builder(
@@ -34,7 +37,11 @@ class DetailedScreenKids extends StatelessWidget {
               color: Colors.black,
               child: Column(
                 children: <Widget>[
-                  Image.network(c[index]),
+                  CachedNetworkImage(
+                    imageUrl: c[index],
+                    fit: BoxFit.cover,
+                  ),
+                  // Image.network(c[index]),
                   //const SizedBox(height: 10,),
                   Text(
                     "Style Id :$index",
