@@ -48,19 +48,19 @@ class ProductsCard extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.pink,
-                  width: 1,
+                  //color: Colors.,
+                  width: .5,
                 ),
                 color: Colors.white12,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(3),
               ),
               child: Stack(
                 children: [
                   Center(
                     child: CachedNetworkImage(
-              imageUrl: image,
-              fit:BoxFit.cover,
-              ),
+                      imageUrl: image,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   IconButton(
                     onPressed: () {

@@ -32,7 +32,7 @@ class Desription extends StatelessWidget {
         ),
         Center(
           child: Card(
-            color: Color(0xffFFF0EB),
+            color: const Color(0xffFFF0EB),
             margin: const EdgeInsets.all(10),
             elevation: 10,
             child: ListTile(

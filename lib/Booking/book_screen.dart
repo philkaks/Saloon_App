@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'detail_screen.dart';
+import 'package:indianyoutubefirebase/Booking/detail_screen%20.dart';
+
 
 const stylistData = [
   {
@@ -57,10 +58,6 @@ class Bookings extends StatelessWidget {
                           'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
                       fit: BoxFit.cover,
                     ),
-                    // child: Image.network(
-                    //   'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
-                    //   fit: BoxFit.fill,
-                    // ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -192,8 +189,14 @@ class StylistCard extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                StylistDetailScreen(stylist)));
+                            builder: (context) => StylistDetailScreen(stylist:stylist)
+                            //                        ServiceBuilder(
+                            // service: Service(
+                            //   title: 'HAND BAG',
+                            //   duration: 40,
+                            //   price: 12500,
+                            // ),))
+                            ));
                   },
                   color: const Color(0xff4E295B),
                   shape: RoundedRectangleBorder(

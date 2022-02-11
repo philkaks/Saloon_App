@@ -4,11 +4,11 @@ import 'Productitem.dart';
 import 'cartlogic.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
+import 'imagedescription.dart';
+
 class DisplayProduct extends StatelessWidget {
-  const DisplayProduct({
-    Key? key,
-    required this.productitem,
-  }) : super(key: key);
+  const DisplayProduct({Key? key, required this.productitem,})
+      : super(key: key);
   final ProductItem productitem;
 
   @override
@@ -84,11 +84,11 @@ class DisplayProduct extends StatelessWidget {
                 ),
                 MaterialButton(
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) =>
-                    //             StylistDetailScreen(stylist)));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Desription(product: productitem.product,)));
                   },
                   color: const Color(0xff4E295B),
                   shape: RoundedRectangleBorder(

@@ -1,5 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:indianyoutubefirebase/Modules/constants.dart';
+
 // Create a Form widget.
 class Comments extends StatefulWidget {
   const Comments({Key? key}) : super(key: key);
@@ -24,7 +28,9 @@ class MyCustomFormState extends State<Comments> {
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
     return Scaffold(
+      backgroundColor: mycolor,
       appBar: AppBar(
+        backgroundColor: mycolor,
         title: const Text(
           'Share your Experince ',
           style: TextStyle(
@@ -34,15 +40,19 @@ class MyCustomFormState extends State<Comments> {
       ),
       body: Stack(children: [
         Center(
-          child:  CachedNetworkImage(
-              imageUrl: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-              fit:BoxFit.cover,
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.transparent,
+            child: ImageFiltered(
+              imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+              child: CachedNetworkImage(
+                imageUrl:
+                    'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                fit: BoxFit.cover,
               ),
-          // child: Image.network(
-          //   'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-          //   colorBlendMode: BlendMode.hardLight,
-          //   fit: BoxFit.cover,
-          // ),
+            ),
+          ),
         ),
         Form(
           key: _formKey,
@@ -67,7 +77,7 @@ class MyCustomFormState extends State<Comments> {
                 },
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
                   style: const ButtonStyle(),
                   onPressed: () {
@@ -79,6 +89,7 @@ class MyCustomFormState extends State<Comments> {
                         const SnackBar(
                             content: Text('THANK YOU FOR YOUR FEEDBACK')),
                       );
+                      //Navigator.pop(context);
                     }
                   },
                   child: const Text('Forward'),

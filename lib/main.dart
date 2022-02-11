@@ -1,10 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Booking/home_screen.dart';
+import 'package:indianyoutubefirebase/Booking/book_screen.dart';
+import 'package:indianyoutubefirebase/Booking/bookedscreen.dart';
+import 'package:indianyoutubefirebase/Rating/commentsection.dart';
 import 'package:indianyoutubefirebase/screens/login_page.dart';
+import 'Booking/booklogic.dart';
 import 'Modules/constants.dart';
-import 'Rating/ratingscreen.dart';
 import 'Sign_in/utils/authentication_client.dart';
 import 'Sign_in/utils/firebase_options.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -20,12 +22,23 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => HomeController(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => HomeController(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => Controller2(),
+        )
+      ],
       child: const MyApp(),
     ),
   );
 }
+// ChangeNotifierProvider(
+//       create: (context) => HomeController(),
+//       child: const MyApp(),
+//     ),
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -166,7 +179,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.green,
                 ),
                 title: Text(
-                  '  ${context.select((HomeController controller) => controller.totalPrice)}                                             10% off',
+                  '  ${context.select((HomeController controller) => controller.totalPrice) + context.select((Controller2 controller) => controller.totalPrice)} ',
+                  // '{context.select((Controller2 controller) => controller.totalPrice)}',
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
@@ -192,16 +206,49 @@ class _MyHomePageState extends State<MyHomePage> {
               elevation: 5,
               child: ListTile(
                 leading: const Icon(Icons.radar, color: mycolor),
-                title: const Text('Rank Stylist'),
+                title: const Text('Share your Experience'),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const RatingScreen()),
+                    MaterialPageRoute(builder: (context) => const Comments()),
                   );
                 },
 
                 //trailing: Text('Name'),
+              ),
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              color: Colors.white,
+              elevation: 5,
+              child: ListTile(
+                leading: const Icon(
+                  Icons.calendar_today,
+                  color: mycolor,
+                ),
+                title: const Text(
+                  'My Bookings',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),
+                ),
+
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BookedScreen()),
+                  );
+                },
+
+                // trailing: Text('Email'),
               ),
             ),
             const SizedBox(
@@ -237,7 +284,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(
-              height: 190,
+              height: 130,
             ),
             const Center(
               child: Text(
