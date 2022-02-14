@@ -1,3 +1,4 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -33,50 +34,41 @@ class WomenTrends extends StatelessWidget {
           // borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: 200,
               height: 200,
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                  width: 1,
-                ),
-                color: Colors.white,
+                color: cardColor1,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: CachedNetworkImage(
                 imageUrl: image,
                 fit: BoxFit.cover,
               ),
-              // child: Image.network(
-              //   image,
-              //   fit: BoxFit.cover,
-              // ),
             ),
-            const SizedBox(
-              height: 10,
+
+            const SizedBox(height: 3),
+            Text(
+              "\$" + price.toString(),
+              style: Theme.of(context).textTheme.subtitle1,
             ),
-            const SizedBox(height: 20 / 2),
-            Row(
-              children: [
-                Expanded(
-                  child: Center(
-                    child: Text(
-                      name,
-                      style: const TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 20 / 5),
-                Text(
-                  "\$" + price.toString(),
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
-              ],
-            )
+            // Row(
+            //   children: [
+            //     Expanded(
+            //       child: Center(
+            //         child: Text(
+            //           name,
+            //           style: const TextStyle(color: Colors.black),
+            //         ),
+            //       ),
+            //     ),
+            //     const SizedBox(width: 20 / 5),
+
+            //   ],
+            // )
           ],
         ),
       ),

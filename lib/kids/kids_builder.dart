@@ -1,9 +1,8 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
-import 'package:indianyoutubefirebase/kids/kids_deesignlist.dart';
-
 import 'kid_design_card.dart';
 import '../Modules/section_title.dart';
+import 'kids_deesignlist.dart';
 
 class Kids extends StatelessWidget {
   const Kids({
@@ -24,12 +23,12 @@ class Kids extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            elevation: 10,
-            margin: const EdgeInsets.symmetric(vertical: 5),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: cardColor1,
+            elevation: 0,
+            // margin: const EdgeInsets.symmetric(vertical: 5),
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(10),
+            // ),
+            color: cardColor2,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(

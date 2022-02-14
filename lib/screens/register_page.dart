@@ -1,12 +1,13 @@
 import 'dart:ui';
 
+import 'package:TheLook/Modules/constants.dart';
+import 'package:TheLook/Sign_in/utils/authentication_client.dart';
+import 'package:TheLook/Sign_in/utils/validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
-import 'package:indianyoutubefirebase/Sign_in/utils/authentication_client.dart';
-import 'package:indianyoutubefirebase/Sign_in/utils/validator.dart';
-import 'package:indianyoutubefirebase/screens/login_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
+import 'login_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);

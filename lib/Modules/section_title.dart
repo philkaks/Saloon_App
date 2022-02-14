@@ -1,6 +1,5 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
-
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -20,7 +19,7 @@ class SectionTitle extends StatelessWidget {
           title,
           style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 color: Colors.black,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w400,
               ),
         ),
         const Icon(
@@ -28,13 +27,6 @@ class SectionTitle extends StatelessWidget {
           size: 15,
           color: mycolor,
         )
-        // TextButton(
-        //   onPressed: pressSeeAll,
-        //   child: const Text(
-        //     "See all",
-        //     style: TextStyle(color: Colors.black54),
-        //   ),
-        // )
       ],
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'stylistsnames.dart';
 import 'stylist_card.dart';
 import '../Modules/section_title.dart';
@@ -20,8 +19,9 @@ class Stylists extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            color: cardColor2,
+            color: Colors.white54,
             elevation: 10,
+            //shadowColor: cardColor1,
             margin: const EdgeInsets.symmetric(vertical: 5),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -31,20 +31,14 @@ class Stylists extends StatelessWidget {
               child: Row(
                 children: List.generate(
                   stylists.length,
-                  (index) => Card(
-                    // key: ValueKey(stylists[index]['name']),
-                    color: stylists[index] == true
-                        ? Color(0xffecc5a5)
-                        : Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 5),
-                      child: StylistCard(
-                        name: stylists[index].name,
-                        image: stylists[index].image,
-                        bgColor: stylists[index].bgColor,
-                        tel: stylists[index].tel,
-                        press: () {},
-                      ),
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(right: 5),
+                    child: StylistCard(
+                      name: stylists[index].name,
+                      image: stylists[index].image,
+                      bgColor: stylists[index].bgColor,
+                      tel: stylists[index].tel,
+                      press: () {},
                     ),
                   ),
                 ),
@@ -54,5 +48,5 @@ class Stylists extends StatelessWidget {
         )
       ],
     );
-  } //
+  }
 }

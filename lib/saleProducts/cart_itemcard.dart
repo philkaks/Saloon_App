@@ -7,8 +7,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'imagedescription.dart';
 
 class DisplayProduct extends StatelessWidget {
-  const DisplayProduct({Key? key, required this.productitem,})
-      : super(key: key);
+  const DisplayProduct({
+    Key? key,
+    required this.productitem,
+  }) : super(key: key);
   final ProductItem productitem;
 
   @override
@@ -52,12 +54,12 @@ class DisplayProduct extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                Text(
-                  productitem.product.id.toString(),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
+                // Text(
+                //   productitem.product.id.toString(),
+                //   style: const TextStyle(
+                //     fontWeight: FontWeight.w300,
+                //   ),
+                // ),
                 const SizedBox(
                   height: 5,
                 ),
@@ -65,7 +67,7 @@ class DisplayProduct extends StatelessWidget {
                   children: <Widget>[
                     const Icon(
                       Icons.attach_money,
-                      size: 16,
+                      size: 25,
                       color: Colors.green,
                     ),
                     const SizedBox(
@@ -74,6 +76,7 @@ class DisplayProduct extends StatelessWidget {
                     Text(
                       productitem.product.price.toString(),
                       style: const TextStyle(
+                        fontSize: 30,
                         color: Color(0xff4E295B),
                       ),
                     ),
@@ -87,8 +90,9 @@ class DisplayProduct extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                Desription(product: productitem.product,)));
+                            builder: (context) => Desription(
+                                  product: productitem.product,
+                                )));
                   },
                   color: const Color(0xff4E295B),
                   shape: RoundedRectangleBorder(

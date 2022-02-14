@@ -1,5 +1,5 @@
+import 'package:TheLook/Modules/slider.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/slider.dart';
 
 
 class Notifications extends StatelessWidget {

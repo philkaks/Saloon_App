@@ -1,12 +1,12 @@
+import 'package:TheLook/Booking/stylistdisplayScreen.dart';
+import 'package:TheLook/screens/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Booking/book_screen.dart';
-import 'package:indianyoutubefirebase/Booking/bookedscreen.dart';
-import 'package:indianyoutubefirebase/Rating/commentsection.dart';
-import 'package:indianyoutubefirebase/screens/login_page.dart';
+import 'Booking/bookedscreen.dart';
 import 'Booking/booklogic.dart';
 import 'Modules/constants.dart';
+import 'Rating/commentsection.dart';
 import 'Sign_in/utils/authentication_client.dart';
 import 'Sign_in/utils/firebase_options.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -48,14 +48,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'GROUP 10',
+      title: 'TheLook',
       color: mycolor,
       home: LoginPage(),
     );
   }
 }
 
-//const MyHomePage(title: 'RECESS')
 class MyHomePage extends StatefulWidget {
   final User user;
   const MyHomePage({Key? key, required this.title, required this.user})
@@ -70,6 +69,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final _authClient = AuthenticationClient();
   int selectedIndex = 0;
+  // ignore: unused_field
   bool _isProgress = false;
   List<Widget> listWidgets = [
     const HomeScreen(),
@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: Colors.white,
+                color: cardColor2,
                 border: Border(
                   bottom: BorderSide(
                     color: Color(0xeff0dfe1),
@@ -126,19 +126,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   CircleAvatar(
                     radius: 65,
                     backgroundImage: NetworkImage(
-                        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'),
+                        'https://media.istockphoto.com/photos/presentable-picture-id172198363?k=20&m=172198363&s=612x612&w=0&h=HlZksLM--w-r_9RprR2NHT6XsejL62J13nkwq274oPw='),
                   ),
                 ],
               ),
             ),
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
               color: Colors.white,
-              elevation: 5,
+              elevation: 2,
               child: ListTile(
-                leading: const Icon(Icons.person, color: mycolor),
+                leading: const Icon(Icons.person, color: Colors.pink),
                 title: Text(
                   '${widget.user.displayName}',
                   style: const TextStyle(
@@ -153,38 +153,42 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
               color: Colors.white,
               elevation: 5,
               child: ListTile(
                 leading: const Icon(
                   Icons.email,
-                  color: mycolor,
+                  color: Colors.pink,
                 ),
-                title: Text('${widget.user.email}'),
+                title: Text(
+                  '${widget.user.email}',
+                  style:
+                      TextStyle(color: kTextColor, fontWeight: FontWeight.w300),
+                ),
                 onTap: () {},
                 // trailing: Text('Email'),
               ),
             ),
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
               color: Colors.white,
-              elevation: 5,
+              elevation: 2,
               child: ListTile(
                 leading: const Icon(
                   Icons.monetization_on,
                   color: Colors.green,
                 ),
                 title: Text(
-                  '  ${context.select((HomeController controller) => controller.totalPrice) + context.select((Controller2 controller) => controller.totalPrice)} ',
+                  ' \$ ${context.select((HomeController controller) => controller.totalPrice) + context.select((Controller2 controller) => controller.totalPrice)} ',
                   // '{context.select((Controller2 controller) => controller.totalPrice)}',
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
-                    color: Colors.black,
+                    color: Colors.green,
                   ),
                 ),
 
@@ -201,12 +205,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Card(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
-              elevation: 5,
+              elevation: 2,
               child: ListTile(
                 leading: const Icon(Icons.radar, color: mycolor),
-                title: const Text('Share your Experience'),
+                title: const Text(
+                  'Share your Experience',
+                  style: TextStyle(fontWeight: FontWeight.w300),
+                ),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -218,14 +225,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(
-              height: 3,
+              height: 1,
             ),
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
               color: Colors.white,
-              elevation: 5,
+              elevation: 2,
               child: ListTile(
                 leading: const Icon(
                   Icons.calendar_today,
@@ -235,8 +242,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   'My Bookings',
                   style: TextStyle(
                     fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black,
+                    fontWeight: FontWeight.w200,
+                    color: Colors.pink,
                   ),
                 ),
 
@@ -257,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   primary: Colors.red,
-                  fixedSize: const Size(50, 50),
+                  fixedSize: const Size(30, 50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
               onPressed: () async {
@@ -304,30 +311,3 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 }
-  
-
-////////////////////////////
-///MaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   title: 'The Recess Project',
-    //   theme: ThemeData(
-    //     scaffoldBackgroundColor: Colors.white,
-    //     primarySwatch: Colors.blue,
-    //     fontFamily: "Gordita",
-    //     appBarTheme: const AppBarTheme(
-    //       backgroundColor: Colors.transparent,
-    //       elevation: 0,
-    //     ),
-    //     textTheme: const TextTheme(
-    //       bodyText2: TextStyle(color: Colors.black54),
-    //     ),
-    //   ),
-    //   home: const HomeScreen(),
-    // );
-// void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
-//   runApp(const MyApp());
-//}

@@ -1,3 +1,4 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -51,7 +52,7 @@ class ProductsCard extends StatelessWidget {
                   //color: Colors.,
                   width: .5,
                 ),
-                color: Colors.white12,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(3),
               ),
               child: Stack(
@@ -74,29 +75,9 @@ class ProductsCard extends StatelessWidget {
                 ],
               ),
             ),
-
-            // Column(
-            //   children: [
-            //     Image.network(
-            //       image,
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     CircleAvatar(
-            //       backgroundImage: Image.network(image).image,
-            //       radius: 40,
-            //       // width: 130,
-            //       // height: 130,
-            //       //fit: BoxFit.fill,
-            //       //height: 132,
-            //     ),
-            //   ],
-            // ),
             const SizedBox(height: 20 / 2),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
                   child: Center(
@@ -119,15 +100,3 @@ class ProductsCard extends StatelessWidget {
     );
   }
 }
-// Container(
-//               width: double.infinity,
-//               decoration: BoxDecoration(
-//                 //make container boundaries as circle
-//                 shape: BoxShape.rectangle,
-//                 border: Border.all(
-//               color: Colors.grey,
-//               width: 1,
-//             ),
-//                 color: bgColor,
-//                 borderRadius: const BorderRadius.all(Radius.circular(80)),
-//               ),

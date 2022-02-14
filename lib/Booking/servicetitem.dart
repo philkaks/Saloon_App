@@ -1,12 +1,10 @@
-import 'package:indianyoutubefirebase/Booking/product.dart';
+import 'package:TheLook/Booking/service.dart';
 
 class ServiceItem {
   int quantity= 1;
  
   
   final Service service;
-
-  //num price;
   
   ServiceItem({
   

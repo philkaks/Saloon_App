@@ -1,7 +1,7 @@
+import 'package:TheLook/Booking/service.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Booking/product.dart';
 
-import 'Productitem.dart';
+import 'servicetitem.dart';
 
 enum HomeState { normal, bookings }
 
@@ -18,8 +18,9 @@ class Controller2 extends ChangeNotifier {
   void addProductToCart(Service service) {
     for (ServiceItem item in bookings) {
       if (item.service.title == service.title) {
-        item.increment();
+        //item.increment();
         //bookings.add(ProductItem(product: product));
+        bookings.removeLast();
         notifyListeners();
         return;
       }
@@ -40,10 +41,10 @@ class Controller2 extends ChangeNotifier {
     notifyListeners();
   }
 
-  void increaseqty(ServiceItem serviceitem) {
-    serviceitem.increment();
-    notifyListeners();
-  }
+  // void increaseqty(ServiceItem serviceitem) {
+  //   serviceitem.increment();
+  //   notifyListeners();
+  // }
 
   int get totalCartItems => bookings.fold(
       0, (previousValue, productitem) => previousValue + productitem.quantity);

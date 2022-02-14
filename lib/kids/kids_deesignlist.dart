@@ -24,7 +24,7 @@ List<Product> Kids_Trends = [
     name: "2",
     image:
         'https://images.unsplash.com/photo-1524503033411-c9566986fc8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2lkcyUyMGhhaXJjdXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    id:2,
+    id: 2,
     price: 12500,
     description: dummyText,
   ),
@@ -32,7 +32,7 @@ List<Product> Kids_Trends = [
     name: "3",
     image:
         'https://media.istockphoto.com/photos/asian-little-girl-getting-haircut-by-hairdresser-at-the-barbershop-picture-id1199343965?k=20&m=1199343965&s=612x612&w=0&h=zKJ04V0W6Ev94WgwJIgrSy37qmFTaDcXtnvv1fgtMIQ=',
-    id:3,
+    id: 3,
     price: 30000,
     description: dummyText,
   ),
@@ -48,7 +48,7 @@ List<Product> Kids_Trends = [
     name: "5",
     image:
         'https://media.istockphoto.com/photos/the-hairdresser-balances-the-boys-hairdo-picture-id969464476?k=20&m=969464476&s=612x612&w=0&h=VoYd94C6rXaIzg14bUrFu52Pt33vHIz_hAgjFbXR9zM=',
-    id:3,
+    id: 3,
     price: 70000,
     description: dummyText,
   ),

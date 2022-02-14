@@ -1,8 +1,9 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'booklogic.dart';
-import 'product.dart';
+import 'service.dart';
 
 class ServiceTile extends StatefulWidget {
   const ServiceTile({
@@ -24,10 +25,15 @@ class _ServiceTileState extends State<ServiceTile> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Card(
-          elevation: 10,
+          color: cardColor1,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          elevation: 3,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Column(
                   children: <Widget>[
@@ -45,7 +51,7 @@ class _ServiceTileState extends State<ServiceTile> {
                       height: 5,
                     ),
                     Text(
-                      widget.service.duration.toString(),
+                      '${widget.service.duration} min',
                       style: const TextStyle(
                         color: Colors.grey,
                       ),
@@ -53,7 +59,7 @@ class _ServiceTileState extends State<ServiceTile> {
                   ],
                 ),
                 Text(
-                  widget.service.price.toString(),
+                  "\$${widget.service.price} ",
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -72,6 +78,7 @@ class _ServiceTileState extends State<ServiceTile> {
                                 Icons.check,
                                 color: Colors.green,
                               )),
+                        onLongPress: () {},
                         onPressed: () {
                           toggleTick();
                           controller.addProductToCart(widget.service);

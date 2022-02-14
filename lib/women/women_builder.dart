@@ -1,8 +1,9 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
-import 'tr_design_card.dart';
+
+import 'women_card.dart';
 import '../Modules/section_title.dart';
-import 'trending_deesignlist.dart';
+import 'women_list.dart';
 
 class WomenDesigns extends StatelessWidget {
   const WomenDesigns({
@@ -23,11 +24,11 @@ class WomenDesigns extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            elevation: 10,
-            margin: const EdgeInsets.symmetric(vertical: 5),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
+            elevation: 0,
+            // margin: const EdgeInsets.symmetric(vertical: 5),
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(10),
+            // ),
             color: cardColor1,
             child: Padding(
               padding: const EdgeInsets.all(8.0),

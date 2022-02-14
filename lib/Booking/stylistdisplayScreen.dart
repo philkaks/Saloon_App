@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:indianyoutubefirebase/Booking/detail_screen%20.dart';
-
+import 'detail_screen .dart';
 
 const stylistData = [
   {
@@ -44,73 +42,45 @@ class Bookings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff4E295B),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                child: Stack(children: [
-                  SizedBox(
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          'https://media.istockphoto.com/photos/retro-styled-beauty-salon-picture-id1325440885?b=1&k=20&m=1325440885&s=170667a&w=0&h=JeC0ZLjDksr5rYOjnMevc0ZutvkNH_XmNJ9ZniyVKIY=',
-                      fit: BoxFit.cover,
+      body: Stack(children: [
+       
+        Positioned(
+           child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(35),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 20,
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {},
+                    const Text(
+                      'Hair Stylist',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
                       ),
-                    ],
-                  ),
-                ]),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(35),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const Text(
-                          'Hair Stylist',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                          ),
-                        ),
-                        StylistCard(stylistData[0]),
-                        StylistCard(stylistData[1]),
-                        StylistCard(stylistData[2]),
-                        StylistCard(stylistData[3]),
-                      ],
                     ),
-                  ),
+                    StylistCard(stylistData[0]),
+                    StylistCard(stylistData[1]),
+                    StylistCard(stylistData[2]),
+                    StylistCard(stylistData[3]),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
-      ),
+      ]),
     );
   }
 }
@@ -189,13 +159,8 @@ class StylistCard extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => StylistDetailScreen(stylist:stylist)
-                            //                        ServiceBuilder(
-                            // service: Service(
-                            //   title: 'HAND BAG',
-                            //   duration: 40,
-                            //   price: 12500,
-                            // ),))
+                            builder: (context) =>
+                                StylistDetailScreen(stylist: stylist)
                             ));
                   },
                   color: const Color(0xff4E295B),

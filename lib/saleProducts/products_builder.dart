@@ -1,5 +1,5 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'product_list.dart';
 import 'productscard.dart';
 import '../Modules/section_title.dart';
@@ -23,12 +23,12 @@ class PopularProducts extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Card(
-            elevation: 10,
+            elevation: 4,
             margin: const EdgeInsets.symmetric(vertical: 5),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
             ),
-            color: cardColor1,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(

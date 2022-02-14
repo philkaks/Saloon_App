@@ -1,6 +1,6 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
 
 // ignore: must_be_immutable
 class DetailedScreenKids extends StatelessWidget {

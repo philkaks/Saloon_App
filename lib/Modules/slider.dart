@@ -1,6 +1,6 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/flagged/photo-1580820258381-20c91a156841?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGFpciUyMHNhbG9vbiUyMGFkdmVydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"),
+                      "https://i.pinimg.com/564x/7b/e1/a8/7be1a813b5cdd692a042be3db55b2fe2.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/photo-1505033852907-44fe8ec1e170?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFpciUyMHNhbG9vbiUyMGFkdmVydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"),
+                      "https://i.pinimg.com/236x/97/e2/fd/97e2fd6a5f428e140e942c7e204803bc.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/photo-1512084747998-038941f49b84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhaXIlMjBzYWxvb24lMjBhZHZlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"),
+                      "https://i.pinimg.com/564x/18/49/8c/18498c3bf04473547e8fc11e362c5644.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/photo-1532171875345-9712d9d4f65a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhhaXIlMjBzYWxvb24lMjBhZHZlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"),
+                      "https://i.pinimg.com/564x/f3/39/36/f3393697f9b86861e59b737297e6d50d.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/photo-1523260578934-e9318da58c8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhhaXIlMjBzYWxvb24lMjBhZHZlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"),
+                      "https://i.pinimg.com/564x/71/0a/16/710a165994738690ff0c324eb26584c7.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -96,15 +96,26 @@ class HomePage extends StatelessWidget {
               color: mycolor, fontWeight: FontWeight.bold, fontSize: 30),
         )),
         Image.network(
-            'https://storage.googleapis.com/dev-blog-images/2020/07/cebd66c8-image6-1024x600.jpg'),
+            'https://i.pinimg.com/564x/f6/27/9d/f6279d35e40cdbba40ce2276fd0c1c3f.jpg'),
+        const Center(
+          child: Text(
+            'Score Points for Every Haircut',
+            style: TextStyle(
+                color: mycolor, fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+        ),
+        Image.network(
+          'https://i.pinimg.com/564x/00/d9/b4/00d9b4403d49c0faa217b62c983d0aa0.jpg',
+        ),
         const Center(
             child: Text(
-          'Score Points for Every Haircut',
+          'Last Minute Appointments',
           style: TextStyle(
-              color: kTextColor, fontWeight: FontWeight.bold, fontSize: 20),
-
-        ),),
-      
+              color: mycolor, fontWeight: FontWeight.bold, fontSize: 30),
+        )),
+        Image.network(
+          'https://i.pinimg.com/564x/c5/22/a3/c522a3447875367b5d47670bc362b9a3.jpg',
+        ),
       ],
     );
   }

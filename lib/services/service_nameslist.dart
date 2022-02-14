@@ -1,8 +1,9 @@
+import 'package:TheLook/kids/detailedscreenkids.dart';
+import 'package:TheLook/men/detailedmenScreen.dart';
+import 'package:TheLook/women/detailedmanicure.dart';
+import 'package:TheLook/women/detailedscreenwomen.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/kids/detailedscreenkids.dart';
-import 'package:indianyoutubefirebase/men/detailedmenScreen.dart';
-import 'package:indianyoutubefirebase/women/detailedmanicure.dart';
-import 'package:indianyoutubefirebase/women/detailedscreenwomen.dart';
+
 
 
 class Service {

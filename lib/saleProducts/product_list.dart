@@ -17,7 +17,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 1,
-    price: 10000,
+    price: 10,
     description: dummyText,
   ),
   Product(
@@ -25,7 +25,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 2,
-    price: 12500,
+    price: 20,
     description: dummyText,
   ),
   Product(
@@ -33,7 +33,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/CREAM-JAR-mock2_Curl-Activ-Moist-100ml.png",
     id: 3,
-    price: 30000,
+    price: 30,
     description: dummyText,
   ),
   Product(
@@ -41,7 +41,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 4,
-    price: 50000,
+    price: 51,
     description: dummyText,
   ),
   Product(
@@ -49,7 +49,7 @@ List<Product> demo_products = [
     image:
         'https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png',
     id: 5,
-    price: 70000,
+    price: 73,
     description: dummyText,
   ),
   Product(
@@ -57,7 +57,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 1,
-    price: 10000,
+    price: 11,
     description: dummyText,
   ),
   Product(
@@ -65,7 +65,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 3,
-    price: 12500,
+    price: 125,
     description: dummyText,
   ),
   Product(
@@ -73,7 +73,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 3,
-    price: 30000,
+    price: 31,
     description: dummyText,
   ),
   Product(
@@ -81,7 +81,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 4,
-    price: 50000,
+    price: 51,
     description: dummyText,
   ),
   Product(
@@ -89,7 +89,7 @@ List<Product> demo_products = [
     image:
         'https://venusforyou.com/wp-content/uploads/2018/06/CREAM-JAR-mock2_Curl-Activ-Moist-100ml.png',
     id: 5,
-    price: 70000,
+    price: 23,
     description: dummyText,
   ),
   Product(
@@ -97,7 +97,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 1,
-    price: 10000,
+    price: 10,
     description: dummyText,
   ),
   Product(
@@ -105,7 +105,7 @@ List<Product> demo_products = [
     image:
         'https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png',
     id: 3,
-    price: 12500,
+    price: 11,
     description: dummyText,
   ),
   Product(
@@ -113,7 +113,7 @@ List<Product> demo_products = [
     image:
         "https://venusforyou.com/wp-content/uploads/2018/06/VEN-hair-mock-bottl_Scalp-soot-shampoo-250-ml.png",
     id: 3,
-    price: 30000,
+    price: 30,
     description: dummyText,
   ),
   Product(
@@ -121,7 +121,7 @@ List<Product> demo_products = [
     image:
         "https://www.cantubeauty.com/wp-content/uploads/sites/3/2018/12/Cantu_Kids_CurlRefresher_8oz_fr-website.jpg",
     id: 4,
-    price: 50000,
+    price: 50,
     description: dummyText,
   ),
   Product(
@@ -129,7 +129,7 @@ List<Product> demo_products = [
     image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJjWHk00muTpFKXO_g-DAMvVIlqZwTIxAB2A&usqp=CAU',
     id: 5,
-    price: 70000,
+    price: 75,
     description: dummyText,
   ),
 ];

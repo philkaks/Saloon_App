@@ -11,11 +11,11 @@ class BookedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.pink ,
-        title: Text(
-          ' Price:${context.select((Controller2 controller) => controller.totalPrice)}',
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
+        backgroundColor: Colors.pink,
+        title: const Text(
+          ' My Bookings',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
             color: Colors.white,
           ),
         ),
@@ -30,9 +30,6 @@ class BookedScreen extends StatelessWidget {
               itemCount: controller.bookings.length);
         },
       ),
-      
     );
   }
 }
-
-

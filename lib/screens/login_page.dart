@@ -1,10 +1,10 @@
 import 'dart:ui';
 
+import 'package:TheLook/Sign_in/utils/authentication_client.dart';
+import 'package:TheLook/Sign_in/utils/validator.dart';
+import 'package:TheLook/screens/register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:indianyoutubefirebase/Sign_in/utils/authentication_client.dart';
-import 'package:indianyoutubefirebase/Sign_in/utils/validator.dart';
-import 'package:indianyoutubefirebase/screens/register_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../main.dart';
 

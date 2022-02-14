@@ -1,6 +1,6 @@
+import 'package:TheLook/Modules/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:indianyoutubefirebase/Modules/constants.dart';
 import 'product_list.dart';
 //import 'package:shopping_cart_side_example/product.dart';
 
