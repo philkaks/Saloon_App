@@ -22,9 +22,6 @@ class SearchForm extends StatelessWidget {
           hintText: "Search items...",
           hintStyle: TextStyle(color: Colors.white),
           border: outlineInputBorder,
-          //enabledBorder: outlineInputBorder,
-          // focusedBorder: outlineInputBorder,
-          // errorBorder: outlineInputBorder,
           prefixIcon: Padding(
             padding: EdgeInsets.all(14),
             child: Icon(

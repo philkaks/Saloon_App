@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'Booking/bookedscreen.dart';
 import 'Booking/booklogic.dart';
+//import 'Modules/constants.dart';
 import 'Modules/constants.dart';
 import 'Rating/commentsection.dart';
 import 'Sign_in/utils/authentication_client.dart';
@@ -35,10 +36,7 @@ void main() async {
     ),
   );
 }
-// ChangeNotifierProvider(
-//       create: (context) => HomeController(),
-//       child: const MyApp(),
-//     ),
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -125,8 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: const [
                   CircleAvatar(
                     radius: 65,
-                    backgroundImage: NetworkImage(
-                        'https://media.istockphoto.com/photos/presentable-picture-id172198363?k=20&m=172198363&s=612x612&w=0&h=HlZksLM--w-r_9RprR2NHT6XsejL62J13nkwq274oPw='),
+                    backgroundImage: AssetImage('assets/WhatsApp Image 2022-02-14 at 18.42.16.jpeg')
                   ),
                 ],
               ),
@@ -143,12 +140,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   '${widget.user.displayName}',
                   style: const TextStyle(
                     color: Colors.black,
-                    //fontSize: 20,
+                  
                   ),
                 ),
 
                 onTap: () {},
-                //trailing: Text('Name'),
               ),
             ),
             Card(
@@ -163,12 +159,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.pink,
                 ),
                 title: Text(
-                  '${widget.user.email}',
+                  widget.user.email.toString(),
                   style:
                       TextStyle(color: kTextColor, fontWeight: FontWeight.w300),
                 ),
                 onTap: () {},
-                // trailing: Text('Email'),
+                
               ),
             ),
             Card(
@@ -184,8 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: Text(
                   ' \$ ${context.select((HomeController controller) => controller.totalPrice) + context.select((Controller2 controller) => controller.totalPrice)} ',
-                  // '{context.select((Controller2 controller) => controller.totalPrice)}',
-                  style: const TextStyle(
+                    style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
                     color: Colors.green,
@@ -199,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
 
-                // trailing: Text('Email'),
+              
               ),
             ),
             Card(
